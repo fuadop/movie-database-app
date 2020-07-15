@@ -27,7 +27,7 @@ export default (props) => {
             </a>
           </li>
           <li className={latestClass}>
-            <a href="/trending" className="nav-link">
+            <a href="/latest" className="nav-link">
               Latest
             </a>
           </li>

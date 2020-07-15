@@ -13,7 +13,7 @@ function App() {
         <Route path="/" exact>
           <Home />
         </Route>
-        <Route path="/trending" exact>
+        <Route path="/latest" exact>
           <Latest />
         </Route>
         {/* 404 route*/}
