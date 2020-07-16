@@ -3,6 +3,7 @@ import NavBar from "../components/NavBar";
 import "bootstrap/dist/css/bootstrap.css";
 
 export default () => {
+  // navbar and pacman loader
   return (
     <div className="container-fluid">
       <NavBar path="/trending" />

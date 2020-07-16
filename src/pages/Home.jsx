@@ -4,12 +4,16 @@ import NavBar from "../components/NavBar";
 import "bootstrap/dist/css/bootstrap.css";
 
 export default () => {
+  //states
+
   const [loading, setLoading] = useState(false);
   let [index, setIndex] = useState(1);
   const [results, setResults] = useState([]);
   const [error, setError] = useState("No results Available, adjust query.");
   const [query, setQuery] = useState("");
   const [pageList, setPageList] = useState(1);
+
+  // fetching data on state change
 
   useEffect(() => {
     const getMovies = async () => {
@@ -21,6 +25,8 @@ export default () => {
         setResults(res.data.Search);
         setPageList(Math.floor(Number(res.data.totalResults) / 10));
         setLoading(false);
+
+        //error handling
       } catch (err) {
         setError(error);
       }
@@ -28,6 +34,13 @@ export default () => {
     getMovies();
   }, [query, index, error]);
 
+  /*
+  - first block - nav bar and search bar
+  - second block - loader(spinner - spins when fetching data)
+  - third block - page toggler
+  - fourth block - error message
+  - fifth block - results loop
+  */
   return (
     <div className="container-fluid">
       <NavBar path={"/"} />

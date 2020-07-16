@@ -3,6 +3,7 @@ body {
   background: url("./components/bg.jpg") no-repeat center/cover fixed;
 }
 
+/* results styling */
 .results-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -12,6 +13,7 @@ body {
   grid-column-gap: 1rem;
 }
 
+/* search bar sticky positioning */
 .search-input {
   top: 7vh;
   z-index: 2;

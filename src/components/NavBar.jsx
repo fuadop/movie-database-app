@@ -1,4 +1,3 @@
-/* eslint-disable no-useless-concat */
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 
@@ -7,6 +6,7 @@ export default (props) => {
   let homeClass;
   let latestClass;
 
+  // condition for active path
   if (path === "/") {
     homeClass = "nav-item active";
     latestClass = "nav-item";
